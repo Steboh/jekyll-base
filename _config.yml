@@ -1,6 +1,7 @@
 # Site settings
 title: Steboh Lars Kemper und Kim Steverding Gbr
-email: kim@steboh.com oder lars@steboh.com
+email1: kim@steboh.com
+email2: lars@steboh.com
 description: > # this means to ignore newlines until "baseurl:"
   Unkonventionell. Disruptiv. Visionär.<br>
   Wir sind die Zukunft.

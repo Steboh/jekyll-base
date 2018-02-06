@@ -2,7 +2,8 @@
 title: Steboh Lars Kemper und Kim Steverding Gbr
 email: kim@steboh.com oder lars@steboh.com
 description: > # this means to ignore newlines until "baseurl:"
-  Unkonventionell. Disruptiv. Visionär. Wir sind die Zukunft.
+  Unkonventionell. Disruptiv. Visionär.<br>
+  Wir sind die Zukunft.
   
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://steboh.com" # the base hostname & protocol for your site

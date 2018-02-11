@@ -47,3 +47,12 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+/**
+ * Site header
+ */
+.site-header {
+  border-top: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
+  min-height: 56px;
+  position: relative; }

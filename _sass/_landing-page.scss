@@ -19,7 +19,8 @@
 }
 
 .landing-page-buy-now {
-  display: inline-block;
+  display: block;
+  box-sizing: border-box;
   width: 100%;
   text-align: center;
   background: #ff8c00;

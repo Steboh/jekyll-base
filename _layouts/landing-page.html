@@ -12,7 +12,7 @@
           </nav>
           {% endif %}
         </header>
-        <div class="flex pt-8">
+        <div class="flex flex-wrap pt-8">
           <div class="landing-page-gallery-container w-1/2">
             <ul class="landing-page-gallery">
               {% for image in page.images %}
@@ -37,6 +37,17 @@
                 <a href="{{amazon_link}}" class="landing-page-buy-now">Jetzt bestellen!</a>
               </div>
             </div>
+          </section>
+          <section class="w-3/4 mt-8">
+            <h2 class="w-full text-center">{{page.features_heading}}</h2>
+            <ul class="ml-0 pr-8">
+              {% for feature in page.features %}
+                <li>{{feature}}</li>
+              {% endfor %}
+            </ul>
+          </section>
+          <section class="w-1/4 mt-8">
+            <h2 class="w-full text-center">Wieso Amazon?</h2>
           </section>
         </div>
         {{ content }}

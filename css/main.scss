@@ -41,8 +41,4 @@ $on-laptop:        800px;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+@import "base", "layout", "syntax-highlighting", "https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css", "landing-page";

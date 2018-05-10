@@ -1,0 +1,40 @@
+@import "https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css";
+
+.landing-page-logo {
+  display: inline-block;
+  background: url("../steboh.svg") no-repeat;
+  background-position-x: center;
+  width: 20%;
+  height: 50px;
+}
+
+.landing-page-nav {
+  width: 80%;
+}
+
+.landing-page-nav a {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+
+.landing-page-buy-now {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #ff8c00;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  &:hover, &:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: #ff9b22;
+  }
+}

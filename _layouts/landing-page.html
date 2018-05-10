@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+        <header class="flex items-center">
+          <a href="{{site.url}}" class="landing-page-logo"></a>
+          {% if page.show_nav %}
+          <nav class="landing-page-nav inline-block">
+            <a href="">Über uns</a><a href="">Warum Amazon?</a><a href="">Das Produkt</a><a href="">Noch mehr Sparen!</a>
+          </nav>
+          {% endif %}
+        </header>
+        <div class="flex pt-8">
+          <div class="landing-page-gallery-container w-1/2">
+            <ul class="landing-page-gallery">
+              {% for image in page.images %}
+              <li data-thumb="images/{{image}}" data-src="images/{{image}}">
+                <img src="images/{{image}}" />
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <section class="w-1/2">
+            <h1>{{page.heading}}</h1>
+            <p>{{page.description}}</p>
+            <div class="flex items-center">
+              <div class="w-1/2">
+                <span class="text-red">Nur für kurze Zeit:</span>
+                <div class="flex items-top">
+                  <div class="line-through">{{page.price}}</div>
+                  <div class="pl-3 text-green text-3xl">{{page.discounted_price}}</div>
+                </div>
+              </div>
+              <div class="w-1/2">
+                <a href="{{amazon_link}}" class="landing-page-buy-now">Jetzt bestellen!</a>
+              </div>
+            </div>
+          </section>
+        </div>
+        {{ content }}
+      </div>
+    </div>
+    {% include footer.html %}
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.landing-page-gallery').lightSlider({
+          gallery: true,
+          item: 1,
+          loop: true,
+          thumbItem: 9,
+          slideMargin: 0,
+          enableDrag: false,
+          currentPagerPosition: 'left',
+        });
+      });
+    </script>
+  </body>
+</html>

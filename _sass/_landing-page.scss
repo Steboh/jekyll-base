@@ -21,7 +21,6 @@
 .landing-page-buy-now {
   display: block;
   box-sizing: border-box;
-  width: 100%;
   text-align: center;
   background: #ff8c00;
   color: white;
@@ -38,4 +37,9 @@
   &:hover {
     background: #ff9b22;
   }
+}
+
+.landing-page-second-buy-call {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }

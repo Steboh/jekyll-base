@@ -7,8 +7,11 @@
         <header class="flex items-center">
           <a href="{{site.url}}" class="landing-page-logo"></a>
           {% if page.show_nav %}
-          <nav class="landing-page-nav inline-block">
-            <a href="">Über uns</a><a href="">Warum Amazon?</a><a href="">Unsere Produkte</a><a href="">Noch mehr Sparen!</a>
+          <nav class="landing-page-nav inline-block flex flex-wrap">
+            <a class="sm:w-1/4 w-1/2" href="">Über uns</a>
+            <a class="sm:w-1/4 w-1/2" href="">Warum Amazon?</a>
+            <a class="sm:w-1/4 w-1/2" href="">Unsere Produkte</a>
+            <a class="sm:w-1/4 w-1/2" href="">Noch mehr Sparen!</a>
           </nav>
           {% endif %}
         </header>

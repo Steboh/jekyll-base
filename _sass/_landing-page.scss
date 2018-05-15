@@ -12,8 +12,22 @@
   width: 80%;
 }
 
+// The link for small screens.
 .landing-page-nav a {
+  box-sizing: border-box;
   text-align: center;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  width: 50%;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 576px) {
+  // The link for larger screens.
+  .landing-page-nav a {
+    width: 25%;
+    font-size: 1rem;
+  }
 }
 
 .landing-page-buy-now {

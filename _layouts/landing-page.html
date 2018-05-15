@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% assign landing = site.data.landings[page.landing_file] %}
 <html>
   {% include head.html %}
   <body>
@@ -18,7 +19,7 @@
         <div class="flex flex-wrap pt-8">
           <div class="landing-page-gallery-container md:w-1/2 w-full">
             <ul class="landing-page-gallery">
-              {% for image in page.images %}
+              {% for image in landing.images %}
               <li data-thumb="images/{{image}}" data-src="images/{{image}}">
                 <img src="images/{{image}}" />
               </li>
@@ -26,26 +27,26 @@
             </ul>
           </div>
           <section class="md:w-1/2 w-full md:mt-0 mt-8">
-            <h1>{{page.heading}}</h1>
-            <p>{{page.description}}</p>
+            <h1>{{landing.heading}}</h1>
+            <p>{{landing.description}}</p>
             <div class="flex items-center">
               <div class="w-1/2">
                 <span class="text-red">Nur für kurze Zeit:</span>
                 <div class="flex items-top">
-                  <div class="line-through">{{page.price}}</div>
-                  <div class="pl-3 text-green text-3xl">{{page.discounted_price}}</div>
+                  <div class="line-through">{{landing.price}}</div>
+                  <div class="pl-3 text-green text-3xl">{{landing.discounted_price}}</div>
                 </div>
               </div>
               <div class="w-1/2">
-                <a href="{{page.amazon_link}}" class="landing-page-buy-now w-full">Jetzt bestellen!</a>
+                <a href="{{landing.amazon_link}}" class="landing-page-buy-now w-full">Jetzt bestellen!</a>
               </div>
             </div>
           </section>
           <section class="w-full h-16"></section>
           <section class="md:w-3/4 w-full">
-            <h2 class="w-full text-center">{{page.features_heading}}</h2>
+            <h2 class="w-full text-center">{{landing.features_heading}}</h2>
             <ul class="pr-8">
-              {% for feature in page.features %}
+              {% for feature in landing.features %}
                 <li>{{feature}}</li>
               {% endfor %}
             </ul>
@@ -57,20 +58,21 @@
                et malesuada fames ac turpis egestas.</p>
           </section>
           <section class="w-full flex flex-wrap mt-8">
-            {% for review in page.reviews %}
+            {% for review in landing.reviews %}
             <div class="landing-page-review sm:w-1/{{forloop.length}} w-1/{{forloop.length | divided_by: 2}} sm:pt-0 pt-8
                         px-4 text-sm text-center">
               {{review}}
               <div class="flex pt-2">
                 {% for i in (1..5) %}
-                <img class="w-1/{{forloop.length}}" style="height: {{100 / forloop.length}}%;" src="images/star.svg" alt="review star">
+                <img class="w-1/{{forloop.length}}" style="height: {{100 | divided_by: forloop.length}}%;"
+                     src="images/star.svg" alt="review star">
                 {% endfor %}
               </div>
             </div>
             {% endfor %}
           </section>
           <section class="landing-page-second-buy-call w-full flex">
-            <a href="{{page.amazon_link}}" class="landing-page-buy-now md:w-1/3 w-1/2 mx-auto">Jetzt bei Amazon bestellen!</a>
+            <a href="{{landing.amazon_link}}" class="landing-page-buy-now md:w-1/3 w-1/2 mx-auto">Jetzt bei Amazon bestellen!</a>
           </section>
         </div>
         {{ content }}

@@ -4,18 +4,8 @@
   {% include head.html %}
   <body>
     <div class="page-content">
+      {% include landing-page-header.html %}
       <div class="wrapper">
-        <header class="flex items-center">
-          <a href="{{site.url}}" class="landing-page-logo"></a>
-          {% if page.show_nav %}
-          <nav class="landing-page-nav inline-block flex flex-wrap">
-            <a href="">Über uns</a>
-            <a href="">Warum Amazon?</a>
-            <a class="sm:pt-0 pt-2" href="">Unsere Produkte</a>
-            <a class="sm:pt-0 pt-2" href="">Noch mehr Sparen!</a>
-          </nav>
-          {% endif %}
-        </header>
         <div class="flex flex-wrap pt-8">
           <div class="landing-page-gallery-container md:w-1/2 w-full">
             <ul class="landing-page-gallery">

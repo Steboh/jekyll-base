@@ -12,6 +12,11 @@
   width: 80%;
 }
 
+.landing-page-header-divider {
+  border-bottom: 1px solid $grey-color-light;
+  padding-top: $spacing-unit;
+}
+
 // The link for small screens.
 .landing-page-nav a {
   box-sizing: border-box;
